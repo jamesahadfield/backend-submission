@@ -79,7 +79,7 @@ describe('testing GenericStringInterpolate', () => {
                 'content': {
                     'someOtherNestedFields': {
                         'moreData': 'I\'ve got 3 more variables',
-                        arrData: ["More array tests for James", "and Anne"]
+                        arrData: ['More array tests for James', 'and Anne']
                     },
                     'testNumber': 4
                 }
