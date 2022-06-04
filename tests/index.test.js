@@ -66,11 +66,11 @@ describe('testing GenericStringInterpolate', () => {
         }),
         test('testing a number', () => {
             expect(GenericStringInterpolate([], variableMap)).toStrictEqual([]);
-        });
-    test('testing a date', () => {
-        expect(GenericStringInterpolate(testDate, variableMap)).toStrictEqual(['Today is 2022-06-04']);
-    }),
-        test('testing object with nested object', () => {
+        }),
+        test('testing a date', () => {
+            expect(GenericStringInterpolate(testDate, variableMap)).toStrictEqual(['Today is 2022-06-04']);
+        }),
+        test('testing object with nested object with array', () => {
             expect(GenericStringInterpolate(testObj3, variableMap)).toStrictEqual({
                 '$header': 'Hey there, James',
                 'subheader': 'We\'ve got 3 goodies for Anne!',

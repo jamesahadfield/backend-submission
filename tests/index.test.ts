@@ -45,9 +45,9 @@ const testObj3 = {
 const testDate = ['Today is $testVariable4'];
 
 describe('testing GenericStringInterpolate', () => {
-    test('string with multiple variables should be converted', () => {
-        expect(GenericStringInterpolate(testStr, variableMap)).toBe('Hey there, James & Anne');
-    }),
+        test('string with multiple variables should be converted', () => {
+            expect(GenericStringInterpolate(testStr, variableMap)).toBe('Hey there, James & Anne');
+        }),
         test('testing simple object of TestInterface type should replace the variables in the property', () => {
             expect(GenericStringInterpolate(testObj, variableMap)).toStrictEqual({ 'testHeader': 'Hey there, James' })
         }),
@@ -78,11 +78,11 @@ describe('testing GenericStringInterpolate', () => {
         }),
         test('testing a number', () => {
             expect(GenericStringInterpolate([], variableMap)).toStrictEqual([])
-        })
-    test('testing a date', () => {
-        expect(GenericStringInterpolate(testDate, variableMap)).toStrictEqual(['Today is 2022-06-04'])
-    }),
-        test('testing object with nested object', () => {
+        }),
+        test('testing a date', () => {
+            expect(GenericStringInterpolate(testDate, variableMap)).toStrictEqual(['Today is 2022-06-04'])
+        }),
+        test('testing object with nested object with array', () => {
             expect(GenericStringInterpolate(testObj3, variableMap)).toStrictEqual({
                 '$header': 'Hey there, James',
                 'subheader': 'We\'ve got 3 goodies for Anne!',
