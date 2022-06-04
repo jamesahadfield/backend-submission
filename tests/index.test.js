@@ -1,4 +1,6 @@
-import { GenericStringInterpolate } from '../src/index';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_1 = require("../src/index");
 const variableMap = new Map();
 variableMap.set('$testVariable1', 'James');
 variableMap.set('$testVariable2', 'Anne');
@@ -34,22 +36,22 @@ const testObj3 = {
 const testDate = ['Today is $testVariable4'];
 describe('testing GenericStringInterpolate', () => {
     test('string with multiple variables should be converted', () => {
-        expect(GenericStringInterpolate(testStr, variableMap)).toBe('Hey there, James & Anne');
+        expect((0, index_1.GenericStringInterpolate)(testStr, variableMap)).toBe('Hey there, James & Anne');
     }),
         test('testing simple object of TestInterface type should replace the variables in the property', () => {
-            expect(GenericStringInterpolate(testObj, variableMap)).toStrictEqual({ 'testHeader': 'Hey there, James' });
+            expect((0, index_1.GenericStringInterpolate)(testObj, variableMap)).toStrictEqual({ 'testHeader': 'Hey there, James' });
         }),
         test('testing boolean false', () => {
-            expect(GenericStringInterpolate(true, variableMap)).toStrictEqual(true);
+            expect((0, index_1.GenericStringInterpolate)(true, variableMap)).toStrictEqual(true);
         }),
         test('testing boolean false', () => {
-            expect(GenericStringInterpolate(false, variableMap)).toStrictEqual(false);
+            expect((0, index_1.GenericStringInterpolate)(false, variableMap)).toStrictEqual(false);
         }),
         test('testing array', () => {
-            expect(GenericStringInterpolate(testArr, variableMap)).toStrictEqual(['Hey there, James', 'Hey there, Anne!']);
+            expect((0, index_1.GenericStringInterpolate)(testArr, variableMap)).toStrictEqual(['Hey there, James', 'Hey there, Anne!']);
         }),
         test('testing object with nested object', () => {
-            expect(GenericStringInterpolate(testObj2, variableMap)).toStrictEqual({
+            expect((0, index_1.GenericStringInterpolate)(testObj2, variableMap)).toStrictEqual({
                 '$header': 'Hey there, James',
                 'subheader': 'We\'ve got 3 goodies for Anne!',
                 'content': {
@@ -62,16 +64,16 @@ describe('testing GenericStringInterpolate', () => {
             });
         }),
         test('testing a number', () => {
-            expect(GenericStringInterpolate(4, variableMap)).toStrictEqual(4);
+            expect((0, index_1.GenericStringInterpolate)(4, variableMap)).toStrictEqual(4);
         }),
         test('testing a number', () => {
-            expect(GenericStringInterpolate([], variableMap)).toStrictEqual([]);
+            expect((0, index_1.GenericStringInterpolate)([], variableMap)).toStrictEqual([]);
         }),
         test('testing a date', () => {
-            expect(GenericStringInterpolate(testDate, variableMap)).toStrictEqual(['Today is 2022-06-04']);
+            expect((0, index_1.GenericStringInterpolate)(testDate, variableMap)).toStrictEqual(['Today is 2022-06-04']);
         }),
         test('testing object with nested object with array', () => {
-            expect(GenericStringInterpolate(testObj3, variableMap)).toStrictEqual({
+            expect((0, index_1.GenericStringInterpolate)(testObj3, variableMap)).toStrictEqual({
                 '$header': 'Hey there, James',
                 'subheader': 'We\'ve got 3 goodies for Anne!',
                 'content': {
@@ -84,7 +86,7 @@ describe('testing GenericStringInterpolate', () => {
             });
         }),
         test('testing null', () => {
-            expect(GenericStringInterpolate(null, variableMap)).toStrictEqual(null);
+            expect((0, index_1.GenericStringInterpolate)(null, variableMap)).toStrictEqual(null);
         });
 });
 //# sourceMappingURL=index.test.js.map

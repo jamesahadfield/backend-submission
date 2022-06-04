@@ -1,4 +1,7 @@
-export function GenericStringInterpolate(contentToBeParsed, variables) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenericStringInterpolate = void 0;
+function GenericStringInterpolate(contentToBeParsed, variables) {
     // fn could have maybe been done using generic types, although may have needed a constraint on T to account for string edge case?
     const stringParseFn = (stringToParse, variableMap) => {
         const strArray = stringToParse.split(' ').map(x => {
@@ -30,4 +33,5 @@ export function GenericStringInterpolate(contentToBeParsed, variables) {
     }
     return contentToBeParsed;
 }
+exports.GenericStringInterpolate = GenericStringInterpolate;
 //# sourceMappingURL=index.js.map
