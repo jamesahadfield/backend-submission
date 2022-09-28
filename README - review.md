@@ -7,3 +7,5 @@ The stringParseFn assumes that (since we're splitting on a space) only alphanume
 There is no specific logic for substituting dates in this code (again, with more time, could have implemented a more complete function), my test simply stringifies a date & substitutes that in for the variable. But, dates could have been handled in the code given some standard. 
 
 The tests could have been written with more business applicable data & with more complex examples - again this is a time constraint issue. 
+
+TEST
